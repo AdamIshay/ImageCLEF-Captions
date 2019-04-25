@@ -6,7 +6,6 @@ import parser
 from sklearn.metrics import f1_score
 import os 
 
-os.chdir('C:/Users/Adam/Python_stuff/IMAGEclef')
 def main(candidate_file,gt_file):
 
     # Hide warnings
@@ -74,8 +73,7 @@ def main(candidate_file,gt_file):
             y_pred = [int(concept in candidate_concepts) for concept in all_concepts]
             
             f1score = f1_score(y_true, y_pred, average='binary')
-            #print(f1score)#added in 
-            #breakpoint()
+            
             # Increase calculated score
             current_score += f1score
 
@@ -138,7 +136,3 @@ def print_dict_sorted_num(obj):
     keylist.sort()
     for key in keylist:
         print(key, ':', obj[str(key)])
-
-# Main
-if __name__ == '__main__':
-    main(sys.argv[1:])
