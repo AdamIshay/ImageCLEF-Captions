@@ -583,7 +583,7 @@ def create_text_files(thresholds, max_per_sample,net_name,array_of_outputs):
 
             
             if t%500==0:
-                pass;#print('t is ' +str(t))
+                pass;
             
             indices=np.argwhere(binary[t]==1)
             indices.shape=len(indices)
